@@ -1,0 +1,54 @@
+body {
+  background-color: #fff;
+    color: #555;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    
+}
+
+img {
+  height: 100px;
+}
+
+h1, h2, h3 {
+  text-align: center;
+}
+
+header {
+  font: 50px black;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSI_9PukC1Lr3G4XcA1uDMz-85Kw9iO4KT7YA&usqp=CAU");
+}
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  
+}
+
+.grid__head1 {
+  font-weight: bolder;
+}
+
+.places {
+  border: .5px grey solid;
+}
+
+main {
+  display: flex;
+}
+
+article {
+  flex-basis: 35%;
+  border: .5px grey solid;
+  margin: 100px 10px 0 20px;
+  
+}
+
+li {
+  list-style-type: none;
+}
+
+.fish {
+  border: .5px grey solid;
+}
