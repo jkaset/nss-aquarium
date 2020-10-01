@@ -1,0 +1,36 @@
+input {
+  width: 375px;
+  height: 25px;
+ }
+ 
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  
+}
+
+.grid__head1 {
+  font-weight: bolder;
+}
+
+.places {
+  border: .5px grey solid;
+}
+
+main {
+  display: flex;
+}
+
+article {
+  flex-basis: 35%;
+  border: .5px grey solid;
+  margin: 100px 10px 0 20px;
+  
+}
+
+
+
+.fish {
+  border: .5px grey solid;
+}
