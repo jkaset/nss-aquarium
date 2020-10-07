@@ -1,4 +1,4 @@
-export const Location = (location) {
+export const Location = (location) => {
   return `
   <li>${location.place}</li>
   `
