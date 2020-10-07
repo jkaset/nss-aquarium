@@ -1,5 +1,6 @@
 //import { Tips } from "./Tips.js"
 import { useTips } from "./TipDataProvider.js"
+import { Tips } from "./Tips.js"
 
 
 export const TipsList = () => {
@@ -9,11 +10,17 @@ export const TipsList = () => {
   const tipses = useTips()
 
   // Add to the existing HTML in the content element
+  let tipsHTMLRepresentations = ""
+  for (const tips of tipses) {
+    tipsHTMLRepresentations += Tips(tips)
+  }
   contentElement.innerHTML += `
-  <article class="tips__list">
-      All the tips go here!
-  </article>
-`
+  <ul class="tips__list">
+    
+    <li>${tipsHTMLRepresentations}<li>
+  </ul>
+
+  `
 }
 /*<ul class="tips__list">
         <li>

@@ -38,3 +38,8 @@ p {
   display: flex;
   flex-direction: column;
 }
+
+.tips {
+  display: flex;
+  margin-right: 3px
+}
