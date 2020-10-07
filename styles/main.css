@@ -26,3 +26,15 @@ header {
   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSI_9PukC1Lr3G4XcA1uDMz-85Kw9iO4KT7YA&usqp=CAU");
 }
 
+.grid {
+  border: olive 1px solid;
+}
+
+.fish__grid {
+  display: flex;
+}
+
+p {
+  display: flex;
+  flex-direction: column;
+}
