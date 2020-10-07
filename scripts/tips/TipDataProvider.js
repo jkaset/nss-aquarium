@@ -6,7 +6,7 @@ const tipsCollection = [
   },
   {
     title: "Temperature:",
-    tip: "Match the temperature to the temperature the fish likes. Don't put 2 fish who like different temperatures in the same tank, or at least one of them will float to the top.
+    tip: "Match the temperature to the temperature the fish likes. Don't put 2 fish who like different temperatures in the same tank, or at least one of them will float to the top."
   },
   {
     title: "Water-selenity:",
@@ -14,3 +14,7 @@ const tipsCollection = [
   },
 
 ]
+
+export const useTips = () => {
+  return tipsCollection.slice()
+}
