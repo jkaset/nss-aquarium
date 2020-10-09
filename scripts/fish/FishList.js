@@ -2,16 +2,18 @@
 //FishList which renders individual fish objects as HTML
 
 import { Fish } from "./Fish.js"
-import { mostHolyFish, nonHolyFish, soldierFish } from './fish/FishDataProvider.js'
-mostHolyFish()
-soldierFish() 
-nonHolyFish()
+import { mostHolyFish, nonHolyFish, soldierFish } from './FishDataProvider.js'
+// mostHolyFish()
+// soldierFish() 
+// nonHolyFish()
 
 
 //NEW FUNCTION FOR INPORT
-const buildFishContainerHTML = (arrayOfFish) => {
+
+const buildFishContainerHTML = (array) => {
   let fishHTMLRepresentations = ""
-  for (const fish of arrayOfFish) {
+  
+  for (const fish of array) {
     fishHTMLRepresentations += Fish(fish)
   }
   return fishHTMLRepresentations
@@ -21,9 +23,8 @@ const buildFishContainerHTML = (arrayOfFish) => {
 export const FishList = () => {
   const contentElement = document.querySelector(".fishList")
 
-  const fishes = useFish()
-  const holyFish = mostHolyFish()
-  console.log(holyFish)
+  const holyFishes = mostHolyFish()
+  const holyFishHTML = buildFishContainerHTML(holyFishes)
 
   const soldierFishes = soldierFish()
   const soldierFishHTML = buildFishContainerHTML(soldierFishes)
@@ -31,17 +32,16 @@ export const FishList = () => {
   const regularFishes = nonHolyFish()
   const regularFishHTML = buildFishContainerHTML(regularFishes)
 
-    }
+  
 
   // Add to the existing HTML in the content element
   //BUILDING STRING OF HTML
+  
   contentElement.innerHTML += `
         <article class="fishList">
-            
             ${holyFishHTML}
             ${soldierFishHTML}
             ${regularFishHTML}
-            
         </article>
     `
-  
+  }
