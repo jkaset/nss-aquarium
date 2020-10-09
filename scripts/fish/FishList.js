@@ -22,7 +22,7 @@ const buildFishContainerHTML = (array) => {
 
 export const FishList = () => {
   const contentElement = document.querySelector(".fishList")
-
+  
   const holyFishes = mostHolyFish()
   const holyFishHTML = buildFishContainerHTML(holyFishes)
 
