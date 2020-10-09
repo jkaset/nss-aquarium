@@ -59,16 +59,16 @@ export const soldierFish = () => {
     }
   }
   // 5, 10, 15, 20, 25, etc... fish
-  return soldiers
+  return soldierFish
 }
 
 export const nonHolyFish = () => {
   const regFish = []
   for (const regular of fishCollection) {
     if (regular.length % 5 != 0 && regular.length % 3 != 0) {
-      nonHolyFish.push(regular) 
+      regFish.push(regular) 
     }
   }
   // Any fish not a multiple of 3 or 5
-  return regularFish
+  return nonHolyFish
 }
