@@ -36,3 +36,39 @@ const fishCollection = [
 export const useFish = () => {
   return fishCollection.slice()
 }
+
+export const mostHolyFish = () => {
+  // 3, 6, 9, 12, etc... fish
+  const holyFish = []
+    
+  for (const holy of fishCollection) {
+    if (holy.length % 3 === 0) {
+      holyFish.push(holy)
+    }
+  }
+
+  return holyFish
+}
+
+export const soldierFish = () => {
+  const soldierFish= []
+  for (const soldier of fishCollection) {
+    if (soldier.length % 5 === 0) {
+        soldierFish.push(soldier)
+        //console.log(soldier)
+    }
+  }
+  // 5, 10, 15, 20, 25, etc... fish
+  return soldierFish
+}
+
+export const nonHolyFish = () => {
+  const regFish = []
+  for (const regular of fishCollection) {
+    if (regular.length % 5 != 0 && regular.length % 3 != 0) {
+      regFish.push(regular) 
+    }
+  }
+  // Any fish not a multiple of 3 or 5
+  return nonHolyFish
+}
