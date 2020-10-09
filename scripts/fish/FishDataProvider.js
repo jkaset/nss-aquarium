@@ -44,6 +44,7 @@ export const mostHolyFish = () => {
   for (const holy of fishCollection) {
     if (holy.length % 3 === 0) {
       holyFish.push(holy)
+      //console.log(holy)
     }
   }
 
@@ -53,7 +54,7 @@ export const mostHolyFish = () => {
 export const soldierFish = () => {
   const soldierFish= []
   for (const soldier of fishCollection) {
-    if (soldier.length % 5 === 0) {
+    if (soldier.length % 5 === 0 && soldier.length % 3 !== 0) {
         soldierFish.push(soldier)
         //console.log(soldier)
     }
@@ -65,8 +66,9 @@ export const soldierFish = () => {
 export const nonHolyFish = () => {
   const regFish = []
   for (const regular of fishCollection) {
-    if (regular.length % 5 != 0 && regular.length % 3 != 0) {
+    if (regular.length % 5 !== 0 && regular.length % 3 !== 0) {
       regFish.push(regular) 
+      console.log(regular)
     }
   }
   // Any fish not a multiple of 3 or 5
