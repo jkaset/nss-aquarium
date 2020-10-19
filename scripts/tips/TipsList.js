@@ -9,19 +9,26 @@ export const TipsList = () => {
   const contentElement = document.querySelector(".tips__list")
   const tipses = useTips()
 
-  // Add to the existing HTML in the content element
-  let tipsHTMLRepresentations = ""
-  for (const tips of tipses) {
-    tipsHTMLRepresentations += Tips(tips)
-  }
   contentElement.innerHTML += `
-  <ul class="tips__list">
-    
-    <li>${tipsHTMLRepresentations}<li>
-  </ul>
-
+    <ul class="tips__list">
+      <li>${tipses.map(tips => Tips(tips)).join("")}</li>
+    </ul>
   `
-}
+} 
+
+  // Add to the existing HTML in the content element
+//   let tipsHTMLRepresentations = ""
+//   for (const tips of tipses) {
+//     tipsHTMLRepresentations += Tips(tips)
+//   }
+//   contentElement.innerHTML += `
+//   <ul class="tips__list">
+    
+//     <li>${tipsHTMLRepresentations}<li>
+//   </ul>
+
+//   `
+// }
 /*<ul class="tips__list">
         <li>
           <h5>${tips.title}</h5>

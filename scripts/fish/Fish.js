@@ -1,3 +1,4 @@
+//STEP 3 CREATE FILE FOR INDIVIDUAL AND RENDER EACH OBJECT AS HTML
 export const Fish = (fish) => {
   return `
       <section class="fish card">

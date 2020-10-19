@@ -1,3 +1,4 @@
+//STEP ONE: PROVIDE RAW DATA FOR WHAT NEEDS TO BE REPRESENTED 
 const fishCollection = [
   {
       name: "Bart",
@@ -33,6 +34,7 @@ const fishCollection = [
 }
 ]
 
+//STEP 2: EXPORT DATA
 export const useFish = () => {
   return fishCollection.slice()
 }
